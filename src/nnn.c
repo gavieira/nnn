@@ -3350,7 +3350,7 @@ static int filterentries(char *path, char *lastname)
 		case KEY_MOUSE:
 			goto end;
 #endif
-		case ESC:
+		case 13: /* Enter can be represented in C as '\n', '\r' or 13 (ASCII Code) */
 			if (handle_alt_key(ch) != ERR) {
 				if (*ch == ESC) /* Handle Alt+Esc */
 					*ch = 'q'; /* Quit context */
